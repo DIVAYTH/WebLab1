@@ -1,0 +1,128 @@
+.header {
+    background: rgba(00, 00, 255, 0.7);
+    font-family: serif;
+    font-size: 28px;
+    font-style: oblique;
+    color: white;
+    padding: 10px;
+}
+
+.trapper {
+    float: right;
+}
+
+.graph {
+    margin: 20px 0 0 20px;
+    background: rgba(140, 185, 255, 0.4);
+    border-radius: 10px;
+    box-shadow: 0 4px 16px #ccc;
+}
+
+svg > .figure:hover {
+    fill: rgba(00, 00, 255, 0.6);
+}
+
+#pointer {
+    transition: all 1s;
+}
+
+.form {
+    margin: 20px 0 0 20px;
+    background: rgba(140, 185, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 4px 16px #ccc;
+}
+
+label[name="symbolY"] {
+    margin: 20px 0 0 20px;
+}
+
+.yInput {
+    outline: none;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+    margin: 8% 0 4% 2%;
+    width: 100px;
+}
+
+#X {
+    margin: 20px 0 10px 10px;
+}
+
+.xInput {
+    outline: none;
+    border-radius: 10px;
+    border: none;
+    margin: 8% 8% 4% 2%;
+    width: 38px;
+}
+
+#rSymbol {
+    margin: 0 20px;
+}
+
+.rInput {
+    position: relative;
+    bottom: 18px;
+    margin: 0 0 0 15%;
+}
+
+.sar {
+    padding: 0 0 8% 8%;
+}
+
+.scroll {
+    height: 600px;
+    overflow: scroll;
+    padding: 0 0 20px 0;
+}
+
+.result {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px #ccc;
+    margin: 20px 20px 0 20px;
+}
+
+.resultHeader {
+    background-color: rgba(140, 185, 255, 0.3);
+}
+
+.result th {
+    width: 135px;
+    height: 60px;
+}
+
+.resultFromPhp {
+    background-color: rgba(140, 185, 255, 0.1);
+}
+
+.footer {
+    width: 100%;
+    position: fixed;
+    background: rgba(00, 00, 255, 0.7);
+    font-family: serif;
+    font-size: 18px;
+    font-style: oblique;
+    color: white;
+    bottom: 0;
+    padding: 10px;
+}
+
+#gitName {
+    position: relative;
+    float: right;
+    right: 50%;
+}
+
+a img {
+    padding: 5px 0 0 0;
+    position: relative;
+    float: right;
+    right: 51%;
+}
+
+body {
+    margin: 0;
+}

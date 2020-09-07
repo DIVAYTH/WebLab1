@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>WebLab1</title>
+    <link rel="stylesheet" type="text/css" href="Style.css">
+</head>
+<body>
+<table width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+        <td colspan="3" valign="top">
+            <header class="header">
+                <span>Вариант 2717</span>
+                <span class="trapper">Попов Даниил Павлович, P3231</span>
+            </header>
+        </td>
+    </tr>
+    <tr>
+        <td valign="top" width="25%">
+            <svg class="graph" width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+                <line x1="0" x2="400" y1="200" y2="200" stroke="black"></line>
+                <text x="385" y="185">X</text>
+                <polygon points="400,200 385,206 385,194" stroke="black"></polygon>
+                <line x1="270" x2="270" y1="207" y2="193" stroke="black"></line>
+                <text x="260" y="185">R/2</text>
+                <line x1="340" x2="340" y1="207" y2="193" stroke="black"></line>
+                <text x="335" y="185">R</text>
+                <line x1="130" x2="130" y1="207" y2="193" stroke="black"></line>
+                <text x="120" y="185">R/2</text>
+                <line x1="60" x2="60" y1="207" y2="193" stroke="black"></line>
+                <text x="55" y="185">R</text>
+                <line x1="200" x2="200" y1="0" y2="400" stroke="black"></line>
+                <text x="215" y="15">Y</text>
+                <polygon points="200,0 194,15 206,15" stroke="black"></polygon>
+                <line x1="207" x2="193" y1="270" y2="270" stroke="black"></line>
+                <text x="215" y="275">R/2</text>
+                <line x1="207" x2="193" y1="340" y2="340" stroke="black"></line>
+                <text x="215" y="345">R</text>
+                <line x1="207" x2="193" y1="130" y2="130" stroke="black"></line>
+                <text x="215" y="135">R/2</text>
+                <line x1="207" x2="193" y1="60" y2="60" stroke="black"></line>
+                <text x="215" y="65">R</text>
+                <rect class="figure" x="60" y="130" height="70" width="140" fill="red" fill-opacity="0.3"
+                      stroke="red"></rect>
+                <polygon class="figure" points="200,340 130,200 200,200" fill="green" fill-opacity="0.3"
+                         stroke="green"></polygon>
+                <path class="figure" d="M200 200 L 340 200 C 330 60 220 60 200 60" fill-opacity="0.3"
+                      stroke="yellow" fill="yellow"></path>
+                <circle id="pointer" r="3" cx="200" cy="200" fill="red" stroke="firebrick">
+                </circle>
+            </svg>
+        </td>
+        <td valign="top" width="18%">
+            <form class="form">
+                <table width="100%">
+                    <tr>
+                        <td>
+                            <div class="error"></div>
+                            <label name="symbolY">Y:<input type="text" class="yInput"></label>
+                            <label id="X">X:<select class="xInput">
+                                <option value="-3">-3</option>
+                                <option value="-2">-2</option>
+                                <option value="-1">-1</option>
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label id="rSymbol">R:</label>
+                            <div class="rInput">
+                                <label><input checked type="radio" name="R" value="1">1</label><br>
+                                <label><input type="radio" name="R" value="1.5">1.5</label><br>
+                                <label><input type="radio" name="R" value="2">2</label><br>
+                                <label><input type="radio" name="R" value="2.5">2.5</label><br>
+                                <label><input type="radio" name="R" value="3">3</label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sar">
+                            <input type="reset" value="Сброс" class="resetBtn">
+                            <input type="submit" value="Отправить" class="submitBtn">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </td>
+        <td valign="top" width="57%">
+            <div class="scroll">
+                <table class="result" cellspacing="0">
+                    <tr class="resultHeader">
+                        <th>Y</th>
+                        <th>X</th>
+                        <th>R</th>
+                        <th>RESULT</th>
+                        <th>TIME</th>
+                        <th>BENCHMARK</th>
+                    </tr>
+                </table>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3" valign="bottom">
+            <footer class="footer">
+                <span id="gitName">DIVAYTH</span><br>
+                <a href="https://github.com/DIVAYTH"><img id="gitImg" src="Img/github.png" height="40px"></a>
+            </footer>
+        </td>
+    </tr>
+</table>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="Script.js"></script>
+</body>
+</html>
