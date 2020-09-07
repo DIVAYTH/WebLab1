@@ -1,4 +1,5 @@
 <?php
+require_once "Result.php";
 session_start();
 $startTime = microtime(true);
 date_default_timezone_set("Europe/Moscow");
@@ -11,7 +12,6 @@ if (checkValue($y, $x, $r)) {
     $benchmark = round(microtime(true) - $startTime, 7) * 1000;
     $answer = array($y, $x, $r, $point, $time, $benchmark);
     array_push($_SESSION['result'], $answer);
-    require_once "Result.php";
     drawResult($answer);
 } else {
     http_response_code(400);

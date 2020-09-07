@@ -1,11 +1,23 @@
 "use strict"
 
 $(function () {
-    ajaxLoad();
+    $.ajax({
+        type: "POST",
+        url: "PHP/Load.php",
+        success: function (answer) {
+            $('.result').append(answer);
+        }
+    })
 
     $('.resetBtn').on('click', function () {
         setPoint(0, 0, 1)
-        ajaxClear()
+        $.ajax({
+            type: "POST",
+            url: "PHP/Clear.php",
+            success: function () {
+                $('.resultFromPhp').remove();
+            }
+        })
     })
 
     $('.submitBtn').on('click', function (event) {
@@ -31,46 +43,16 @@ function checkY(y, x, r) {
         showError('Y должен быть числом')
     } else {
         $('.error').html("")
-        let params = 'Y=' + y + '&' + 'X=' + x + '&' + 'R=' + r;
-        ajaxPost(params)
+        $.ajax({
+            type: "POST",
+            url: "PHP/Request.php",
+            data: {Y: y, X: x, R: r},
+            success: function (answer) {
+                $('.result').append(answer);
+            }
+        })
         setPoint(y, x, r)
     }
-}
-
-function ajaxLoad() {
-    let request = new XMLHttpRequest()
-    request.onreadystatechange = function () {
-        if (request.readyState === 4 && request.status === 200) {
-            $('.result').append(request.responseText);
-        }
-    }
-    request.open('post', 'PHP/Load.php')
-    request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    request.send()
-}
-
-function ajaxClear() {
-    let request = new XMLHttpRequest()
-    request.onreadystatechange = function () {
-        if (request.readyState === 4 && request.status === 200) {
-            $('.resultFromPhp').remove();
-        }
-    }
-    request.open('post', 'PHP/Clear.php')
-    request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    request.send()
-}
-
-function ajaxPost(params) {
-    let request = new XMLHttpRequest()
-    request.onreadystatechange = function () {
-        if (request.readyState === 4 && request.status === 200) {
-            $('.result').append(request.responseText);
-        }
-    }
-    request.open('post', 'PHP/Request.php')
-    request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    request.send(params)
 }
 
 function showError(message) {
